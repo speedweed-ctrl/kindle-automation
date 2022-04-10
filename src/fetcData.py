@@ -27,6 +27,21 @@ def fetch_description_data():
     except:
         raise Exception('check ur data')
 
+def fetch_cover_data():
+    Directory= '..//data/coover'
+    data=os.listdir('..//data/coover')
+    parsed_data=[]
+    for i in data:
+        path=os.path.abspath(Directory+i)
+        parsed_data.append(path)
+    return parsed_data
 
-
+def fetch_content():
+    Directory= '..//data/books'
+    data=os.listdir('..//data/books')
+    parsed_data=[]
+    for i in data:
+        path=os.path.abspath(Directory+i)
+        parsed_data.append(path)
+    return parsed_data
 
